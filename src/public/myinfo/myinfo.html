@@ -1,0 +1,31 @@
+<div class="login">
+  <h1 class="text-center">Registered Info</h1>
+  <div  class="signup">
+    <div class="form-group">
+      <label>First Name :</label>&nbsp;<label>{{myinfoCtrl.firstname}}</label>
+    </div>
+    <div class="form-group">
+      <label>Last Name :</label>&nbsp;<label>{{myinfoCtrl.lastname}}</label>
+    </div>
+    <div class="form-group">
+      <label>Email Address :</label>&nbsp;<label>{{myinfoCtrl.emailaddress}}</label>
+    </div>
+    <div class="form-group">
+      <label>Phone NUmber :</label>&nbsp;<label>{{myinfoCtrl.phonenumber}}</label>
+    </div>
+    <div class="form-group">
+      <label>Favourite Meal (Short Name) :</label>&nbsp;<label>{{myinfoCtrl.favouritedish}}</label>
+    </div>
+
+  <span ng-if="myinfoCtrl.notSigned">
+   Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+ </span>
+
+  <div class="favourite-dish" ng-if="myinfoCtrl.ismenuItem">
+    <menu-item menu-item="myinfoCtrl.menuItem">
+    </menu-item>
+  </div>
+  </div>
+
+
+</div>
